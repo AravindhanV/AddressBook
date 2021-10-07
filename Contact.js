@@ -20,5 +20,22 @@ class Contact {
     }
   }
   
-
+  let firstName = "";
+  let lastName = "";
+  let address = "";
+  let city = "";
+  let state = "";
+  let zip = -1;
+  let phone = -1;
+  let email = "";
+  let contact = new Contact(
+    firstName,
+    lastName,
+    address,
+    city,
+    state,
+    zip,
+    phone,
+    email
+  );
   
