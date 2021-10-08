@@ -113,7 +113,7 @@ function addContact(newcontact) {
 }
 
 try {
-  addressBook.push(
+  addContact(
     new Contact(
       "A",
       "B",
@@ -125,7 +125,7 @@ try {
       "ab@gmail.com"
     )
   );
-  addressBook.push(
+  addContact(
     new Contact(
       "C",
       "D",
