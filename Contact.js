@@ -175,3 +175,8 @@ function deleteContact(firstName, lastName) {
     console.log("Contact Deleted");
   } else throw "Contact not found";
 }
+
+function getCountOfContacts() {
+  let count = addressBook.reduce((count) => (count += 1), 0);
+  return count;
+}
