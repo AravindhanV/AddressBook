@@ -252,3 +252,10 @@ function sortAddressBookByState() {
   );
   return sortedBook;
 }
+
+function sortAddressBookByZipCode() {
+  let sortedBook = addressBook.sort((contact1, contact2) =>
+    contact1.zipCode.localeCompare(contact2.zipCode)
+  );
+  return sortedBook;
+}
