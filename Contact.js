@@ -164,3 +164,14 @@ function editContact(firstName, lastName, fieldToBeEdited, newField) {
       console.log("Invalid Field");
   }
 }
+
+function deleteContact(firstName, lastName) {
+  let indexToBeDeleted = addressBook.findIndex(
+    (contact) =>
+      contact._firstName == firstName && contact._lastName == lastName
+  );
+  if (indexToBeDeleted != -1) {
+    addressBook.splice(indexToBeDeleted, 1);
+    console.log("Contact Deleted");
+  } else throw "Contact not found";
+}
