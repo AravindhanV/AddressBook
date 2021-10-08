@@ -245,3 +245,10 @@ function sortAddressBookByCity() {
   );
   return sortedBook;
 }
+
+function sortAddressBookByState() {
+  let sortedBook = addressBook.sort((contact1, contact2) =>
+    contact1.state.localeCompare(contact2.state)
+  );
+  return sortedBook;
+}
