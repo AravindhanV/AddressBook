@@ -231,3 +231,8 @@ function getCountInCityOrState(fieldName, fieldValue) {
   }
   return count;
 }
+
+function sortAddressBook(){
+  let sortedBook= addressBook.sort((contact1, contact2) => (contact1.firstName).localeCompare(contact2.firstName));
+  return sortedBook;
+}
