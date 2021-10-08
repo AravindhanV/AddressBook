@@ -101,6 +101,17 @@ class Contact {
 }
 
 let addressBook = new Array();
+
+function addContact(newcontact) {
+  let duplicate = addressBook.find(
+    (contact) =>
+      contact._firstName == newcontact._firstName &&
+      contact._lastName == newcontact._lastName
+  );
+  if (duplicate == -1) addressBook.push(newcontact);
+  else throw "Duplicate contact" + newcontact;
+}
+
 try {
   addressBook.push(
     new Contact(
