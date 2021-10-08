@@ -202,3 +202,8 @@ function searchInCity(firstName, lastName, cityName) {
   if (contact != null) console.log("Contact found: " + contact);
   else throw "Contact not found";
 }
+
+function getContactsByCity(cityName) {
+  let contacts = addressBook.filter((contact) => contact._city == cityName);
+  return contacts;
+}
