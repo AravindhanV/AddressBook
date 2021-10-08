@@ -129,4 +129,38 @@ try {
 } catch (e) {
   console.error(e);
 }
-console.log(addressBook);
+
+function editContact(firstName, lastName, fieldToBeEdited, newField) {
+  let contact = addressBook.find(
+    (contact) =>
+      contact._firstName == firstName && contact._lastName == lastName
+  );
+  switch (fieldToBeEdited) {
+    case "firstName":
+      contact._firstName = newField;
+      break;
+    case "lastName":
+      contact._lastName = newField;
+      break;
+    case "address":
+      contact._address = newField;
+      break;
+    case "city":
+      contact._city = newField;
+      break;
+    case "state":
+      contact.state = newField;
+      break;
+    case "zipCode":
+      contact._zipCode = newField;
+      break;
+    case "phoneNumber":
+      contact._phoneNumber = newField;
+      break;
+    case "email":
+      contact._email = newField;
+      break;
+    default:
+      console.log("Invalid Field");
+  }
+}
