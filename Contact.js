@@ -212,3 +212,22 @@ function getContactsByState(stateName) {
   let contacts = addressBook.filter((contact) => contact._state == stateName);
   return contacts;
 }
+
+function getCountInCityOrState(fieldName, fieldValue) {
+  let count = 0;
+  switch (fieldName) {
+    case "city":
+      count = addressBook
+        .filter((contact) => contact._city == fieldValue)
+        .reduce((countOfContacts) => (countOfContacts += 1));
+      break;
+    case "state":
+      count = addressBook
+        .filter((contact) => contact._city == fieldValue)
+        .reduce((countOfContacts) => (countOfContacts += 1));
+      break;
+    default:
+      console.log("Invalid field name");
+  }
+  return count;
+}
