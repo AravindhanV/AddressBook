@@ -207,3 +207,8 @@ function getContactsByCity(cityName) {
   let contacts = addressBook.filter((contact) => contact._city == cityName);
   return contacts;
 }
+
+function getContactsByState(stateName) {
+  let contacts = addressBook.filter((contact) => contact._state == stateName);
+  return contacts;
+}
